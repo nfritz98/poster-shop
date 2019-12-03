@@ -41,6 +41,8 @@ new Vue({
                 //remove this item from cart-array
                 this.cart.splice(i, 1)
             }
+        },
+        onSubmit: function () {
         }
     },
     filters: {
