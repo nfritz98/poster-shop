@@ -1,6 +1,6 @@
 new Vue({
     el: '#app',
-    datal: {
-
+    data: {
+        total: 0
     }
 });
