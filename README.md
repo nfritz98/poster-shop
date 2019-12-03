@@ -42,7 +42,7 @@ Ensure [Node.js  >=4](https://nodejs.org/en/download/), [NPM](https://docs.npmjs
     npm run serve
     ```
 
-5. Your site will be available at *localhost:3000*.
+5. Your site will be available at *localhost:3001*.
 
 6. code-repo is at https://github.com/nfritz98/poster-shop
 
