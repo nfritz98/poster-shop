@@ -44,6 +44,8 @@ Ensure [Node.js  >=4](https://nodejs.org/en/download/), [NPM](https://docs.npmjs
 
 5. Your site will be available at *localhost:3000*.
 
+6. code-repo is at https://github.com/nfritz98/poster-shop
+
 ## Troubleshooting
 
 Here are some common mistakes people make, check these before filing an issue:
