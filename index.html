@@ -36,15 +36,22 @@
                         <div class="item-title">{{ item.title}}</div>
                     </li>
                 </ul>
-            <div>
-                Total: {{ total }}
+            <div v-if="cart.length">
+                <div class="cart-total">
+                    Total: {{ total }}
+                </div>
+            </div>
+            <div v-else class="empty-cart">
+                No items in the cart.
             </div>
         </div>
     </div>
 </div>
 
 <!-- Scripts -->
+<!-- relads js instantly on saving files -->
 <script src="/reload/reload.js"></script>
+<!-- include vue -->
 <script src="/node_modules/vue/dist/vue.js"></script>
 <script type="text/javascript" src="public/script.js"></script>
 
