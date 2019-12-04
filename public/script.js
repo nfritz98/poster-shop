@@ -1,3 +1,5 @@
+var LOAD_NUM = 4;
+
 new Vue({
     el: "#app",
     data: {
@@ -6,7 +8,8 @@ new Vue({
         cart: [],
         search: 'cat',
         lastSearch: '',
-        loading: false
+        loading: false,
+        results: []
     },
     methods: {
         addToCart: function(product) {
@@ -47,7 +50,8 @@ new Vue({
             var path = '/search?q='.concat(this.search);
             this.$http.get(path)
                 .then(function (response) {
-                    this.products = response.body;
+                    this.results = response.body;
+                    this.products = response.body.slice(0, LOAD_NUM);
                     this.lastSearch = this.search;
                     this.loading = false;
                 });
@@ -61,4 +65,12 @@ new Vue({
     created: function () {
         this.onSubmit();
     }
+});
+
+//Creates listener for element on page
+var sensor = document.querySelector('#product-list-bottom');
+var watcher =  scrollMonitor.create(sensor);
+
+watcher.enterViewport(function () {
+
 });
