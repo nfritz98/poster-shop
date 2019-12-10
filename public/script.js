@@ -74,6 +74,14 @@ new Vue({
             return price.toFixed(2).concat(' €');
         }
     },
+    watch: {
+        cart: {
+            handler: function () {
+                console.log('dddd');
+            },
+            deep: true //false by default, if set to true, watches nested objects
+        }
+    },
     created: function () {
         this.onSubmit();
     },
