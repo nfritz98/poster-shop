@@ -76,8 +76,9 @@ new Vue({
     },
     watch: {
         cart: {
-            handler: function () {
-                console.log('dddd');
+            //current value of watches array
+            handler: function (val) {
+                this.$http.post('/cart_update', val)
             },
             deep: true //false by default, if set to true, watches nested objects
         }
